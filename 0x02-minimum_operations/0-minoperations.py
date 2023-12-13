@@ -18,9 +18,13 @@ def minOperations(n):
     if type(n) is not int:
         return 0
     res = 0
-    for i in range(2, n):
-        while n % i == 0:
-            res += i
-            n = n / i
-
+    if n == 2:
+        res = 2
+    elif n == 3:
+        res = 3
+    else:
+        for i in range(2, n):
+            while n % i == 0:
+                res += i
+                n = n / i
     return res
