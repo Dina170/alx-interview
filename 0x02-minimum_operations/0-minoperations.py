@@ -15,16 +15,11 @@ def minOperations(n):
     """Returns the fewest number of operations needed to
        result in exactly n H characters in the file
     """
-    if type(n) is not int:
+    if type(n) is not int or n < 2:
         return 0
     res = 0
-    if n == 2:
-        res = 2
-    elif n == 3:
-        res = 3
-    else:
-        for i in range(2, n):
-            while n % i == 0:
-                res += i
-                n = n / i
+    for i in range(2, n + 1):
+        while n % i == 0:
+            res += i
+            n //= i
     return res
