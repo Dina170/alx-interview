@@ -1,1 +1,1 @@
-# prime game
+# Interview challenges
