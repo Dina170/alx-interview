@@ -1,2 +1,1 @@
-# alx-interview
-Interview challenges
+# prime game
